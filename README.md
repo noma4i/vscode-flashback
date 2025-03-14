@@ -19,7 +19,7 @@ A VSCode extension for browsing git file history.
 5. Press Escape if nothing suits you to return to the current state
 
 Git Flashback acts as a time machine for your files, allowing you to instantly see how your file looked at any point in history and restore it to that state with a single keystroke.
-
+## Comparison Mode
 <table>
   <tr>
     <td width="50%"><img src="images/full_mode.gif" alt="Standard Mode" /></td>
