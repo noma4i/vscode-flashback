@@ -1,0 +1,94 @@
+{
+  "name": "git-flashback",
+  "displayName": "Git Flashback",
+  "description": "Explore Git File History Like a Time Machine",
+  "icon": "images/flashback_icon.png",
+  "version": "0.1.1",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "git-flashback.showHistory",
+        "title": "Flashback: Show File History"
+      },
+      {
+        "command": "git-flashback.openSettings",
+        "title": "Flashback: Open Settings GUI"
+      }
+    ],
+    "configuration": {
+      "title": "Git Flashback",
+      "properties": {
+        "git-flashback.useCustomFormat": {
+          "type": "boolean",
+          "default": false,
+          "description": "Use custom format string instead of individual display options"
+        },
+        "git-flashback.commitFormat": {
+          "type": "string",
+          "default": "%s%n[%h] %cN (%ce)%n%cD (%cr)",
+          "description": "Git log format for commit display. See git log --pretty=format documentation for available placeholders."
+        },
+        "git-flashback.showSubject": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show commit subject in the list"
+        },
+        "git-flashback.showHash": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show commit hash in the list"
+        },
+        "git-flashback.showAuthor": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show commit author in the list"
+        },
+        "git-flashback.showEmail": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show author email in the list"
+        },
+        "git-flashback.showDate": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show commit date in the list"
+        },
+        "git-flashback.showRelativeDate": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show relative date (e.g., 2 days ago) in the list"
+        },
+        "git-flashback.useExtendedDiff": {
+          "type": "boolean",
+          "default": false,
+          "description": "Show diff between commits instead of file content when navigating"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext ts",
+    "pretest": "npm run compile && npm run lint",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.7",
+    "@types/vscode": "^1.60.0",
+    "@typescript-eslint/eslint-plugin": "^6.13.1",
+    "@typescript-eslint/parser": "^6.13.1",
+    "eslint": "^8.47.0",
+    "glob": "^10.3.3",
+    "typescript": "^5.3.2"
+  }
+}
