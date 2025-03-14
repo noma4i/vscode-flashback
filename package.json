@@ -4,6 +4,10 @@
   "description": "Explore Git File History Like a Time Machine",
   "icon": "images/flashback_icon.png",
   "version": "0.1.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/noma4i/vscode-flashback.git"
+  },
   "engines": {
     "vscode": "^1.60.0"
   },
