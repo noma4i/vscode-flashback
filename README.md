@@ -2,6 +2,21 @@
 
 A VSCode extension for browsing git file history.
 
+## Installation
+
+### VS Code Marketplace
+Install the extension from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=noma4i.git-flashback)
+
+### Manual Installation
+1. Download the VSIX file from [GitHub Releases](https://github.com/noma4i/vscode-flashback/releases)
+2. In VS Code: Extensions → ... (View and More Actions) → Install from VSIX...
+3. Select the downloaded file
+
+## Requirements
+
+- Git installed and available in PATH
+- File must be in a git repository
+
 ## Features
 
 - View commit history for the current file
