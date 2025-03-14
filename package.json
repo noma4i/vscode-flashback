@@ -2,7 +2,12 @@
   "name": "git-flashback",
   "displayName": "Git Flashback",
   "description": "Explore Git File History Like a Time Machine",
+  "publisher": "noma4i",
   "icon": "images/flashback_icon.png",
+  "galleryBanner": {
+    "color": "#c6cdd3",
+    "theme": "light"
+  },
   "version": "0.1.1",
   "repository": {
     "type": "git",
